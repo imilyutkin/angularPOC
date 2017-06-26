@@ -1,11 +1,29 @@
 {
   "name": "start-angular",
-  "version": "1.0.0",
-  "description": "",
+  "description": "this is test project",
+  "version": "0.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^4.2.4",
+    "@angular/compiler": "^4.2.4",
+    "@angular/core": "^4.2.4",
+    "@angular/forms": "^4.2.4",
+    "@angular/http": "^4.2.4",
+    "@angular/platform-browser": "^4.2.4",
+    "rxjs": "^5.4.1",
+    "zone.js": "^0.8.12"
+  },
+  "devDependencies": {
+    "codelyzer": "^3.1.1",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4"
+  },
+  "keywords": [
+    "angular2"
+  ]
 }

@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var path = require('path');
-var helpers = require('./helpers');
+var helpers = require('../helpers');
 var ROOT = path.resolve(__dirname, '..');
 
 module.exports = function (options) {
@@ -15,7 +15,7 @@ module.exports = function (options) {
     },
     resolve: {
       extensions: ['.ts', '.js', '.json'],
-      modules: [path.resolve(__dirname, 'node_modules')],
+      modules: [path.resolve(ROOT, 'node_modules')],
     },
     module: {
       rules: [
@@ -38,12 +38,12 @@ module.exports = function (options) {
         {
           test: /\.css$/,
           use: ['to-string-loader', 'css-loader'],
-          exclude: [helpers.root('src', 'styles')]
+          exclude: [helpers.root('src/gc', 'styles')]
         },
         {
           test: /\.scss$/,
           use: ['to-string-loader', 'css-loader', 'sass-loader'],
-          exclude: [helpers.root('src', 'styles')]
+          exclude: [helpers.root('src/gc', 'styles')]
         },
         {
           test: /\.html$/,
